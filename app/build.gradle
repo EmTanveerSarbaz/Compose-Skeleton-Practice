@@ -1,6 +1,10 @@
 plugins {
     id 'com.android.application'
+    id 'kotlin-android'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -91,6 +95,34 @@ final navigationArchitectureDependencies = [
         navigationCompose: "androidx.navigation:navigation-compose:$nav_version"
 ]
 
+final googleGlide = [
+        glide: 'com.github.bumptech.glide:glide:4.12.0'
+]
+
+final annotationProcessorDependencies = [
+        glideCompiler: 'com.github.bumptech.glide:compiler:4.12.0'
+]
+
+final networkDependencies = [
+        retrofit             : "com.squareup.retrofit2:retrofit:$retrofit_version",
+        retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:$retrofit_version",
+        okhttp               : "com.squareup.okhttp3:okhttp:$retrofit_version",
+        okHttp3Logging       : "com.squareup.okhttp3:logging-interceptor:$ok_http_version",
+]
+
+final hiltInjection = [
+        hilt                  : "com.google.dagger:hilt-android:$hilt_version",
+        hiltNavigationFragment: "androidx.hilt:hilt-navigation-fragment:1.0.0"
+]
+
+final compileDependencies = [
+        dIHilt                : "com.google.dagger:hilt-android-compiler:2.38.1",
+        //Lifecycle-aware components perform actions in response to a change in the lifecycle status of another component,
+        // such as activities and fragments. These components help you produce better-organized, and often lighter-weight code,
+        // that is easier to maintain.
+        lifecycleCompiler     : "androidx.lifecycle:lifecycle-compiler:2.3.1"
+]
+
 //endregion
 
 dependencies {
@@ -108,5 +140,18 @@ dependencies {
 
     //Navigation Architecture Library
     implementation navigationArchitectureDependencies.values()
+
+    // Glide - Image loading
+    implementation googleGlide.values()
+    annotationProcessor annotationProcessorDependencies.values()
+
+    //Retrofit
+    implementation networkDependencies.values()
+
+    //HILT
+    implementation hiltInjection.values()
+
+    //annotationProcessor Compilers Dependencies
+    annotationProcessor compileDependencies.values()
 
 }

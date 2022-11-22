@@ -1,4 +1,4 @@
-package com.tanveer.test.composeskeletonpractice.ui
+package com.tanveer.test.composeskeletonpractice.shared.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

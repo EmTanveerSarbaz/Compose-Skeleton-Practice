@@ -1,4 +1,4 @@
-package com.tanveer.test.composeskeletonpractice.ui
+package com.tanveer.test.composeskeletonpractice.screens_pre_login.screen_splash.presentation
 
 
 import androidx.compose.foundation.border

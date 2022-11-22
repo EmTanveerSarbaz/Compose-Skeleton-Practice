@@ -1,4 +1,4 @@
-package com.tanveer.test.composeskeletonpractice.ui
+package com.tanveer.test.composeskeletonpractice.screens_post_login.screen_dashboard.presentation
 
 import android.widget.Toast
 import androidx.compose.foundation.clickable

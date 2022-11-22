@@ -9,8 +9,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.tanveer.test.composeskeletonpractice.ui.DashboardScreen
-import com.tanveer.test.composeskeletonpractice.ui.SplashScreen
+import com.tanveer.test.composeskeletonpractice.screens_post_login.screen_dashboard.presentation.DashboardScreen
+import com.tanveer.test.composeskeletonpractice.screens_pre_login.screen_splash.presentation.SplashScreen
 import kotlinx.coroutines.launch
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
